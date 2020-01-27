@@ -15,7 +15,7 @@ const forecast = (latitude, longitude, callback) => {
 			// 	temperature: response.body.currently.temperature,
 			// 	precipitation: response.body.currently.precipProbability
 			// })
-			callback(undefined, body.daily.data[0].summary + ' Il fait actuellement ' + body.currently.temperature + '°C. Il y a ' + body.currently.precipProbability + '% de chance de précipitation.')
+			callback(undefined, body.daily.data[0].summary + ' La maximale est de ' + body.daily.data[0].temperatureMax + '°C pour une minimale de ' + body.daily.data[0].temperatureMin + '°C. Il fait actuellement ' + body.currently.temperature + '°C. Il y a ' + body.currently.precipProbability + '% de chance de précipitation.')
 		}
 	})
 }
